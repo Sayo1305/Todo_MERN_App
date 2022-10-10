@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: linear-gradient(to top , rgb(249, 182, 180) , rgb(188, 188, 254));
+  min-height: 100vh;
+}
+.AppHead{
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 2px 2px 5px #000;
+}
+
+.TodoContainer{
+  width: 50%;
+  position: relative;
+  margin: 0 auto;
+}
+.Todobox{
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+.Todobox.complete{
+  text-decoration: line-through;
+}
+
+.TodoText{
+  font-size: 1.4rem;
+  font-family: 'Bungee Spice', cursive;
+}
+.TodoInput{
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border: #000 solid 1px;
+  border-radius: 50%;
+}
+
+.TodoInput.active{
+  background: limegreen;
+}
+.AddNewCont{
+  padding: 10px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.TodosAdd{
+  cursor: pointer;
+  border-radius: 50%;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  border: solid 1px #000;
+  color: #000 ;
+  font-size: 2rem;
+  font-weight: 600;
+  background: linear-gradient(to top , rgb(100, 255, 100) , rgb(118, 118, 255));
+}
+
+.POPUP{
+  width: 100%;
+  top: 50%;
+  display: flex;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  max-width: 400px;
+  background: lightcoral;
+  border-radius: 10px;
+  padding: 10px;
+  position: fixed;
+  height: auto;
+  justify-content: space-between;
+}
+.POPUPTEXT{
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px 1px #000;
+}
+
+.Submit{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: lightgreen;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 500px){
+  .TodoContainer{
+    width: 100%;
+  }
+  .POPUP{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
